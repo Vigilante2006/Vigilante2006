@@ -7,12 +7,6 @@
 #### <div align="center">I'm a front-end developer who loves to create stunning websites and applications that are easy to use. I believe in keeping things simple and focusing on user experience.</div>  
   
 
-- 🌱 I’m currently learning MERN  
-  
-
-- ⚡ Fun fact: I use tabs over spaces  
-  
-
 <br/>  
 
 
