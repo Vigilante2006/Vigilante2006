@@ -65,8 +65,8 @@ I am a **Frontend Engineer** with a **Data Analyst** background. This unique com
 
 ### ⚡ GitHub Stats
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Vigilante2006&show_icons=true&theme=tokyonight&hide_border=true" height="180" alt="stats graph" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vigilante2006&layout=compact&theme=tokyonight&hide_border=true" height="180" alt="languages graph" />
+  <!-- <img src="https://github-readme-stats.vercel.app/api?username=Vigilante2006&show_icons=true&theme=tokyonight&hide_border=true" height="180" alt="stats graph" /> -->
+  <!-- <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vigilante2006&layout=compact&theme=tokyonight&hide_border=true" height="180" alt="languages graph" /> -->
 </div>
 <br />
 <div align="center">
