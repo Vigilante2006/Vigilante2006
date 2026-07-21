@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="100%" height="600">
+  
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;500;700&amp;display=swap');
+      
+      .bg { fill: #080B12; }
+      .surface { fill: #10141D; }
+      .card { fill: #171C28; }
+      .border-line { stroke: #2A3242; }
+      
+      .text-title { font-family: 'Space Grotesk', sans-serif; fill: #F8FAFC; }
+      .text-body { font-family: 'Inter', sans-serif; fill: #CBD5E1; }
+      .text-accent { fill: #EF4444; }
+      .text-secondary { fill: #14B8A6; }
+      
+      .glow-red { filter: url(#glowRed); }
+      .glow-teal { filter: url(#glowTeal); }
+      .glass { filter: url(#glassFilter); }
+      
+      .hover-lift { transition: transform 0.3s ease; }
+      .hover-lift:hover { transform: translateY(-5px); }
+    </style>
+    
+    <filter id="glowRed" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <filter id="glowTeal" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glassFilter" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.4 0" result="alpha"/>
+      <feComposite in="SourceGraphic" in2="alpha" operator="over"/>
+    </filter>
+
+    <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#7f1d1d" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e2433" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#171c28" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  
+  <text x="600" y="60" class="text-title" font-size="32" font-weight="700" text-anchor="middle">BREATHING STYLES</text>
+  <path d="M 500 85 L 700 85" stroke="#14B8A6" stroke-width="3" opacity="0.8"/>
+  <circle cx="600" cy="85" r="5" fill="#14B8A6" class="glow-teal"/>
+
+  <!-- Skills Columns -->
+  <g transform="translate(100, 150)">
+    
+    <!-- Water Breathing -->
+    <g transform="translate(0, 0)" class="hover-lift">
+      <rect width="450" height="80" rx="16" fill="url(#cardGrad)" stroke="#2A3242" stroke-width="1.5"/>
+      <circle cx="40" cy="40" r="20" fill="#10141D" stroke="#38BDF8" stroke-width="2"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">🌊</text>
+      <text x="80" y="35" class="text-title" font-size="16" font-weight="600">Water Breathing (Frontend)</text>
+      <text x="80" y="60" class="text-body" font-size="14">React, HTML, CSS, Tailwind</text>
+      <rect x="300" y="38" width="120" height="6" rx="3" fill="#10141D"/>
+      <rect x="300" y="38" width="100" height="6" rx="3" fill="#38BDF8"/>
+    </g>
+
+    <!-- Flame Breathing -->
+    <g transform="translate(550, 0)" class="hover-lift">
+      <rect width="450" height="80" rx="16" fill="url(#cardGrad)" stroke="#2A3242" stroke-width="1.5"/>
+      <circle cx="40" cy="40" r="20" fill="#10141D" stroke="#EF4444" stroke-width="2"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">🔥</text>
+      <text x="80" y="35" class="text-title" font-size="16" font-weight="600">Flame Breathing (Backend)</text>
+      <text x="80" y="60" class="text-body" font-size="14">Node.js, Express, PHP</text>
+      <rect x="300" y="38" width="120" height="6" rx="3" fill="#10141D"/>
+      <rect x="300" y="38" width="85" height="6" rx="3" fill="#EF4444"/>
+    </g>
+
+    <!-- Thunder Breathing -->
+    <g transform="translate(0, 110)" class="hover-lift">
+      <rect width="450" height="80" rx="16" fill="url(#cardGrad)" stroke="#2A3242" stroke-width="1.5"/>
+      <circle cx="40" cy="40" r="20" fill="#10141D" stroke="#F59E0B" stroke-width="2"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">⚡</text>
+      <text x="80" y="35" class="text-title" font-size="16" font-weight="600">Thunder Breathing (Performance)</text>
+      <text x="80" y="60" class="text-body" font-size="14">Vite, Webpack</text>
+      <rect x="300" y="38" width="120" height="6" rx="3" fill="#10141D"/>
+      <rect x="300" y="38" width="90" height="6" rx="3" fill="#F59E0B"/>
+    </g>
+
+    <!-- Mist Breathing -->
+    <g transform="translate(550, 110)" class="hover-lift">
+      <rect width="450" height="80" rx="16" fill="url(#cardGrad)" stroke="#2A3242" stroke-width="1.5"/>
+      <circle cx="40" cy="40" r="20" fill="#10141D" stroke="#94A3B8" stroke-width="2"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">🌫️</text>
+      <text x="80" y="35" class="text-title" font-size="16" font-weight="600">Mist Breathing (Cloud)</text>
+      <text x="80" y="60" class="text-body" font-size="14">Vercel, Netlify, AWS</text>
+      <rect x="300" y="38" width="120" height="6" rx="3" fill="#10141D"/>
+      <rect x="300" y="38" width="70" height="6" rx="3" fill="#94A3B8"/>
+    </g>
+
+    <!-- Stone Breathing -->
+    <g transform="translate(0, 220)" class="hover-lift">
+      <rect width="450" height="80" rx="16" fill="url(#cardGrad)" stroke="#2A3242" stroke-width="1.5"/>
+      <circle cx="40" cy="40" r="20" fill="#10141D" stroke="#64748B" stroke-width="2"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">🪨</text>
+      <text x="80" y="35" class="text-title" font-size="16" font-weight="600">Stone Breathing (Architecture)</text>
+      <text x="80" y="60" class="text-body" font-size="14">MongoDB, PostgreSQL</text>
+      <rect x="300" y="38" width="120" height="6" rx="3" fill="#10141D"/>
+      <rect x="300" y="38" width="60" height="6" rx="3" fill="#64748B"/>
+    </g>
+
+    <!-- Wind Breathing -->
+    <g transform="translate(550, 220)" class="hover-lift">
+      <rect width="450" height="80" rx="16" fill="url(#cardGrad)" stroke="#2A3242" stroke-width="1.5"/>
+      <circle cx="40" cy="40" r="20" fill="#10141D" stroke="#10B981" stroke-width="2"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">🌪️</text>
+      <text x="80" y="35" class="text-title" font-size="16" font-weight="600">Wind Breathing (DevOps)</text>
+      <text x="80" y="60" class="text-body" font-size="14">Docker, Git, GitHub Actions</text>
+      <rect x="300" y="38" width="120" height="6" rx="3" fill="#10141D"/>
+      <rect x="300" y="38" width="75" height="6" rx="3" fill="#10B981"/>
+    </g>
+
+  </g>
+</svg>

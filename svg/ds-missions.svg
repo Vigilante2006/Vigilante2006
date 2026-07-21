@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="100%" height="450">
+  
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;500;700&amp;display=swap');
+      
+      .bg { fill: #080B12; }
+      .surface { fill: #10141D; }
+      .card { fill: #171C28; }
+      .border-line { stroke: #2A3242; }
+      
+      .text-title { font-family: 'Space Grotesk', sans-serif; fill: #F8FAFC; }
+      .text-body { font-family: 'Inter', sans-serif; fill: #CBD5E1; }
+      .text-accent { fill: #EF4444; }
+      .text-secondary { fill: #14B8A6; }
+      
+      .glow-red { filter: url(#glowRed); }
+      .glow-teal { filter: url(#glowTeal); }
+      .glass { filter: url(#glassFilter); }
+      
+      .hover-lift { transition: transform 0.3s ease; }
+      .hover-lift:hover { transform: translateY(-5px); }
+    </style>
+    
+    <filter id="glowRed" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <filter id="glowTeal" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glassFilter" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.4 0" result="alpha"/>
+      <feComposite in="SourceGraphic" in2="alpha" operator="over"/>
+    </filter>
+
+    <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#7f1d1d" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e2433" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#171c28" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  
+  <text x="600" y="60" class="text-title" font-size="32" font-weight="700" text-anchor="middle">MISSION SCROLLS</text>
+  <path d="M 500 85 L 700 85" stroke="#F59E0B" stroke-width="3" opacity="0.8"/>
+  <circle cx="600" cy="85" r="5" fill="#F59E0B" class="glow-red"/>
+
+  <g transform="translate(100, 140)">
+    
+    <!-- Repo 1 -->
+    <a href="https://github.com/Vigilante2006/spotifyGlassCard" target="_blank">
+      <g transform="translate(0, 0)" class="hover-lift">
+        <rect width="480" height="120" rx="16" fill="url(#cardGrad)" stroke="#2A3242" stroke-width="1.5"/>
+        <text x="30" y="40" class="text-title" font-size="20" font-weight="700" fill="#FFFFFF">🎵 spotifyGlassCard</text>
+        <text x="30" y="75" class="text-body" font-size="14">Glassmorphism Spotify-style card UI.</text>
+        <text x="30" y="100" class="text-body" font-size="14">A premium frontend component.</text>
+        <rect x="420" y="25" width="40" height="20" rx="10" fill="#10141D" stroke="#14B8A6"/>
+        <text x="440" y="39" class="text-title" font-size="10" fill="#14B8A6" text-anchor="middle">JS</text>
+      </g>
+    </a>
+
+    <!-- Repo 2 -->
+    <a href="https://github.com/Vigilante2006/kalyanam.github.io" target="_blank">
+      <g transform="translate(520, 0)" class="hover-lift">
+        <rect width="480" height="120" rx="16" fill="url(#cardGrad)" stroke="#2A3242" stroke-width="1.5"/>
+        <text x="30" y="40" class="text-title" font-size="20" font-weight="700" fill="#FFFFFF">💒 kalyanam.github.io</text>
+        <text x="30" y="75" class="text-body" font-size="14">Elegant event-themed web page.</text>
+        <text x="30" y="100" class="text-body" font-size="14">Refined typography and responsive layout.</text>
+        <rect x="420" y="25" width="40" height="20" rx="10" fill="#10141D" stroke="#38BDF8"/>
+        <text x="440" y="39" class="text-title" font-size="10" fill="#38BDF8" text-anchor="middle">CSS</text>
+      </g>
+    </a>
+
+    <!-- Repo 3 -->
+    <a href="https://github.com/Vigilante2006/netflixClone.github.io" target="_blank">
+      <g transform="translate(0, 150)" class="hover-lift">
+        <rect width="480" height="120" rx="16" fill="url(#cardGrad)" stroke="#2A3242" stroke-width="1.5"/>
+        <text x="30" y="40" class="text-title" font-size="20" font-weight="700" fill="#FFFFFF">🎬 netflixClone</text>
+        <text x="30" y="75" class="text-body" font-size="14">Netflix-style landing page clone.</text>
+        <text x="30" y="100" class="text-body" font-size="14">Cinematic dark UI and responsive grids.</text>
+        <rect x="420" y="25" width="40" height="20" rx="10" fill="#10141D" stroke="#38BDF8"/>
+        <text x="440" y="39" class="text-title" font-size="10" fill="#38BDF8" text-anchor="middle">CSS</text>
+      </g>
+    </a>
+
+    <!-- Repo 4 -->
+    <a href="https://github.com/Vigilante2006/FormWithLocalStorage" target="_blank">
+      <g transform="translate(520, 150)" class="hover-lift">
+        <rect width="480" height="120" rx="16" fill="url(#cardGrad)" stroke="#2A3242" stroke-width="1.5"/>
+        <text x="30" y="40" class="text-title" font-size="20" font-weight="700" fill="#FFFFFF">📝 FormWithLocalStorage</text>
+        <text x="30" y="75" class="text-body" font-size="14">Interactive form with local persistence.</text>
+        <text x="30" y="100" class="text-body" font-size="14">Practical JavaScript data handling.</text>
+        <rect x="420" y="25" width="40" height="20" rx="10" fill="#10141D" stroke="#14B8A6"/>
+        <text x="440" y="39" class="text-title" font-size="10" fill="#14B8A6" text-anchor="middle">JS</text>
+      </g>
+    </a>
+
+  </g>
+</svg>

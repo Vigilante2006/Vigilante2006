@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="100%" height="450">
+  
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;500;700&amp;display=swap');
+      
+      .bg { fill: #080B12; }
+      .surface { fill: #10141D; }
+      .card { fill: #171C28; }
+      .border-line { stroke: #2A3242; }
+      
+      .text-title { font-family: 'Space Grotesk', sans-serif; fill: #F8FAFC; }
+      .text-body { font-family: 'Inter', sans-serif; fill: #CBD5E1; }
+      .text-accent { fill: #EF4444; }
+      .text-secondary { fill: #14B8A6; }
+      
+      .glow-red { filter: url(#glowRed); }
+      .glow-teal { filter: url(#glowTeal); }
+      .glass { filter: url(#glassFilter); }
+      
+      .hover-lift { transition: transform 0.3s ease; }
+      .hover-lift:hover { transform: translateY(-5px); }
+    </style>
+    
+    <filter id="glowRed" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <filter id="glowTeal" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glassFilter" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.4 0" result="alpha"/>
+      <feComposite in="SourceGraphic" in2="alpha" operator="over"/>
+    </filter>
+
+    <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#7f1d1d" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e2433" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#171c28" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="450" rx="20" class="surface border-line" stroke-width="2"/>
+  
+  <!-- Red Moon -->
+  <circle cx="600" cy="200" r="100" fill="url(#moonGrad)" class="glow-red">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Clouds / Mist (Simple paths) -->
+  <path d="M400 250 Q 500 230 600 260 T 800 250" fill="none" stroke="#2A3242" stroke-width="4" opacity="0.6">
+    <animate attributeName="d" values="M400 250 Q 500 230 600 260 T 800 250; M400 260 Q 500 240 600 270 T 800 260; M400 250 Q 500 230 600 260 T 800 250" dur="8s" repeatCount="indefinite"/>
+  </path>
+  <path d="M350 280 Q 450 260 550 290 T 850 270" fill="none" stroke="#2A3242" stroke-width="8" opacity="0.4">
+    <animate attributeName="d" values="M350 280 Q 450 260 550 290 T 850 270; M350 290 Q 450 270 550 300 T 850 280; M350 280 Q 450 260 550 290 T 850 270" dur="10s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Sword Silhouette -->
+  <path d="M595 100 L 605 100 L 602 320 L 598 320 Z" fill="#F8FAFC" class="glow-teal" opacity="0.9"/>
+  <rect x="585" y="300" width="30" height="10" fill="#EF4444" rx="2"/>
+  <rect x="592" y="310" width="16" height="50" fill="#171C28" stroke="#EF4444" stroke-width="2" rx="2"/>
+
+  <!-- Left Content -->
+  <g transform="translate(60, 160)">
+    <text y="0" class="text-title" font-size="48" font-weight="700">Vigilante2006</text>
+    <text y="35" class="text-body text-secondary" font-size="20" font-weight="500">FULL STACK DEVELOPER</text>
+    <text y="75" class="text-body" font-size="16" opacity="0.8">Building clean, premium web</text>
+    <text y="100" class="text-body" font-size="16" opacity="0.8">experiences &amp; glassmorphism UIs.</text>
+    
+    <!-- CTA Button -->
+    <g transform="translate(0, 140)" class="hover-lift">
+      <rect width="160" height="48" rx="8" fill="#EF4444" class="glow-red"/>
+      <text x="80" y="30" class="text-title" fill="#FFFFFF" font-size="16" font-weight="600" text-anchor="middle">View Missions</text>
+    </g>
+  </g>
+
+  <!-- Right Content (Status Cards) -->
+  <g transform="translate(850, 150)">
+    <!-- System Status -->
+    <g transform="translate(0, 0)">
+      <rect width="280" height="50" rx="12" fill="url(#cardGrad)" class="border-line" stroke-width="1.5"/>
+      <circle cx="25" cy="25" r="5" fill="#22C55E" class="glow-teal"/>
+      <text x="45" y="31" class="text-title" font-size="14" font-weight="600">SYSTEM ONLINE</text>
+    </g>
+    <!-- Base -->
+    <g transform="translate(0, 65)">
+      <rect width="280" height="50" rx="12" fill="url(#cardGrad)" class="border-line" stroke-width="1.5"/>
+      <circle cx="25" cy="25" r="5" fill="#EF4444"/>
+      <text x="45" y="31" class="text-title" font-size="14" font-weight="600">BASE: UNNAO, INDIA</text>
+    </g>
+    <!-- Rank -->
+    <g transform="translate(0, 130)">
+      <rect width="280" height="50" rx="12" fill="url(#cardGrad)" class="border-line" stroke-width="1.5"/>
+      <circle cx="25" cy="25" r="5" fill="#F59E0B"/>
+      <text x="45" y="31" class="text-title" font-size="14" font-weight="600">RANK: S-CLASS DEV</text>
+    </g>
+  </g>
+</svg>
