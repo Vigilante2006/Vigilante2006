@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Original developer corps crest inspired by Japanese geometry">
+  <defs>
+    <linearGradient id="crestGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+  </defs>
+  <polygon points="60,8 108,35 108,85 60,112 12,85 12,35" fill="#171C28" stroke="url(#crestGrad)" stroke-width="2.5"/>
+  <polygon points="60,22 92,42 92,78 60,98 28,78 28,42" fill="none" stroke="#2A3242" stroke-width="1.5"/>
+  <!-- Abstract blade + code brackets -->
+  <path d="M48 55 L60 38 L72 55 L68 55 L68 82 L52 82 L52 55 Z" fill="#F8FAFC" opacity="0.9"/>
+  <text x="60" y="68" text-anchor="middle" font-family="monospace" font-size="14" fill="#14B8A6">&lt;/&gt;</text>
+</svg>

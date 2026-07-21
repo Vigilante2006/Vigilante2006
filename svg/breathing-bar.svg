@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 24" role="img" aria-label="Breathing style progress bar">
+  <defs>
+    <linearGradient id="barFill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <style>
+      @keyframes breathe {
+        0%, 100% { width: 100%; opacity: 0.85; }
+        50% { width: 101%; opacity: 1; }
+      }
+      .fill { animation: breathe 4s ease-in-out infinite; }
+    </style>
+  </defs>
+  <rect x="0" y="4" width="400" height="16" rx="8" fill="#10141D" stroke="#2A3242" stroke-width="1"/>
+  <rect class="fill" x="2" y="6" width="396" height="12" rx="6" fill="url(#barFill)"/>
+</svg>

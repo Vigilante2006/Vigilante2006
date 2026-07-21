@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 40" width="100%" height="40">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Central line -->
+  <line x1="0" y1="20" x2="800" y2="20" stroke="#0B1120" stroke-width="2"/>
+  <line x1="100" y1="20" x2="700" y2="20" stroke="#00E5FF" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Glowing nodes -->
+  <circle cx="400" cy="20" r="4" fill="#050816" stroke="#00E5FF" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="200" cy="20" r="3" fill="#7B61FF" filter="url(#glow)"/>
+  <circle cx="600" cy="20" r="3" fill="#7B61FF" filter="url(#glow)"/>
+
+  <!-- Circuit traces -->
+  <path d="M 380 20 L 390 10 L 410 10 L 420 20 L 410 30 L 390 30 Z" fill="none" stroke="#64FFDA" stroke-width="1" opacity="0.6"/>
+  <path d="M 180 20 L 190 15 L 210 15 L 220 20" fill="none" stroke="#00E5FF" stroke-width="1" opacity="0.4"/>
+  <path d="M 580 20 L 590 25 L 610 25 L 620 20" fill="none" stroke="#00E5FF" stroke-width="1" opacity="0.4"/>
+</svg>

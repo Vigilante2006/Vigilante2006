@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <linearGradient id="scan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="transparent"/>
+  
+  <!-- Outer rings -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#0B1120" stroke-width="2"/>
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#00E5FF" stroke-width="1" stroke-dasharray="10 5 2 5" opacity="0.6"/>
+  
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#7B61FF" stroke-width="1" opacity="0.4"/>
+  <circle cx="100" cy="100" r="50" fill="none" stroke="#64FFDA" stroke-width="1" stroke-dasharray="20 10"/>
+  
+  <!-- Crosshairs -->
+  <line x1="10" y1="100" x2="190" y2="100" stroke="#00E5FF" stroke-width="1" opacity="0.3"/>
+  <line x1="100" y1="10" x2="100" y2="190" stroke="#00E5FF" stroke-width="1" opacity="0.3"/>
+
+  <!-- Scanning wedge -->
+  <g filter="url(#glow)">
+    <path d="M 100 100 L 100 10 A 90 90 0 0 1 190 100 Z" fill="url(#scan)">
+      <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="4s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Targets -->
+  <circle cx="140" cy="60" r="3" fill="#64FFDA" filter="url(#glow)">
+    <animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="60" cy="130" r="2" fill="#00E5FF" filter="url(#glow)">
+    <animate attributeName="opacity" values="0;1;0" dur="4s" begin="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="120" cy="150" r="4" fill="#7B61FF" filter="url(#glow)">
+    <animate attributeName="opacity" values="0;1;0" dur="4s" begin="1s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Center node -->
+  <circle cx="100" cy="100" r="5" fill="#00E5FF" filter="url(#glow)"/>
+  <circle cx="100" cy="100" r="15" fill="none" stroke="#00E5FF" stroke-width="1">
+     <animate attributeName="r" values="5;25" dur="2s" repeatCount="indefinite" />
+     <animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite" />
+  </circle>
+</svg>

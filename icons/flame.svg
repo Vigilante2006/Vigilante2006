@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Flame Breathing icon">
+  <circle cx="24" cy="24" r="22" fill="#171C28" stroke="#EF4444" stroke-width="1.5"/>
+  <path d="M24 38 C24 38 14 28 18 18 C20 24 22 22 24 14 C26 22 28 24 30 18 C34 28 24 38 24 38" fill="#EF4444" opacity="0.85"/>
+  <path d="M24 34 C24 34 20 28 22 22 C23 26 24 25 24 20 C24 25 25 26 26 22 C28 28 24 34 24 34" fill="#F59E0B"/>
+</svg>

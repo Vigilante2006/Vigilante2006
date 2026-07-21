@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Mist Breathing icon">
+  <circle cx="24" cy="24" r="22" fill="#171C28" stroke="#CBD5E1" stroke-width="1.5"/>
+  <ellipse cx="18" cy="26" rx="10" ry="5" fill="#CBD5E1" opacity="0.35"/>
+  <ellipse cx="30" cy="24" rx="12" ry="6" fill="#CBD5E1" opacity="0.25"/>
+  <ellipse cx="24" cy="30" rx="14" ry="5" fill="#14B8A6" opacity="0.2"/>
+</svg>

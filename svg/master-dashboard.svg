@@ -1,0 +1,283 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="800" height="550">
+  <defs>
+    <style>
+      :root {
+        --glass-bg: rgba(25, 30, 40, 0.7);
+        --glass-border: rgba(255, 255, 255, 0.6);
+        --gold-main: #F4D03F;
+        --gold-glow: #F39C12;
+        --text-main: #FFFFFF;
+        --text-muted: #BFC9CA;
+      }
+      
+      .fill-glass { fill: var(--glass-border); }
+      .fill-gold { fill: var(--gold-main); }
+      .fill-white { fill: #FFFFFF; }
+      .fill-bar-bg { fill: rgba(255, 255, 255, 0.15); }
+      .fill-bar { fill: rgba(255, 255, 255, 0.8); }
+
+      .stroke-white { stroke: #FFFFFF; }
+      .stroke-gold { stroke: var(--gold-main); }
+      .stroke-w-1 { stroke-width: 1; }
+      .stroke-w-2 { stroke-width: 2; }
+      .stroke-w-3 { stroke-width: 3; }
+
+      .text-main { fill: var(--text-main); }
+      .text-muted { fill: var(--text-muted); }
+      .text-gold { fill: var(--gold-main); }
+
+      .font-serif { font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif; }
+      .font-sans { font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }
+      
+      .font-bold { font-weight: bold; }
+      .font-italic { font-style: italic; }
+
+      .filter-glow { filter: url(#glow); }
+      .filter-gold-glow { filter: url(#goldGlow); }
+    </style>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="goldGlow">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComponentTransfer in="blur" result="glow">
+        <feFuncR type="linear" slope="1.5"/>
+        <feFuncG type="linear" slope="1.2"/>
+        <feFuncB type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(30, 40, 50, 0.85)"/>
+      <stop offset="100%" stop-color="rgba(15, 20, 25, 0.95)"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="550" fill="transparent"/>
+
+  <g transform="translate(30, 30)">
+    
+    <rect x="0" y="0" width="740" height="490" rx="15" fill="none" class="stroke-white filter-glow" stroke-width="4" opacity="0.2"/>
+    <rect x="0" y="0" width="740" height="490" rx="15" fill="url(#glassGrad)"/>
+    
+    <rect x="8" y="8" width="724" height="474" rx="10" class="stroke-white" fill="none" stroke-width="1.5" opacity="0.7"/>
+    <rect x="12" y="12" width="716" height="466" rx="8" class="stroke-white" fill="none" stroke-width="0.5" opacity="0.3"/>
+
+    
+    <g transform="translate(10, 10) rotate(0)">
+      <path d="M 0 30 L 0 0 L 30 0" class="stroke-white stroke-w-2 filter-glow" fill="none"/>
+      <polygon points="0,0 8,8 16,0 8,-8" class="fill-white filter-glow" transform="translate(6, 6) scale(0.6) rotate(45)"/>
+      <path d="M 8 35 Q 15 15 35 8" class="stroke-white stroke-w-1" fill="none" opacity="0.6"/>
+      <circle cx="3" cy="45" r="1.5" class="fill-white" opacity="0.6"/>
+      <circle cx="45" cy="3" r="1.5" class="fill-white" opacity="0.6"/>
+    </g>
+  
+    
+    <g transform="translate(730, 10) rotate(90)">
+      <path d="M 0 30 L 0 0 L 30 0" class="stroke-white stroke-w-2 filter-glow" fill="none"/>
+      <polygon points="0,0 8,8 16,0 8,-8" class="fill-white filter-glow" transform="translate(6, 6) scale(0.6) rotate(45)"/>
+      <path d="M 8 35 Q 15 15 35 8" class="stroke-white stroke-w-1" fill="none" opacity="0.6"/>
+      <circle cx="3" cy="45" r="1.5" class="fill-white" opacity="0.6"/>
+      <circle cx="45" cy="3" r="1.5" class="fill-white" opacity="0.6"/>
+    </g>
+  
+    
+    <g transform="translate(730, 480) rotate(180)">
+      <path d="M 0 30 L 0 0 L 30 0" class="stroke-white stroke-w-2 filter-glow" fill="none"/>
+      <polygon points="0,0 8,8 16,0 8,-8" class="fill-white filter-glow" transform="translate(6, 6) scale(0.6) rotate(45)"/>
+      <path d="M 8 35 Q 15 15 35 8" class="stroke-white stroke-w-1" fill="none" opacity="0.6"/>
+      <circle cx="3" cy="45" r="1.5" class="fill-white" opacity="0.6"/>
+      <circle cx="45" cy="3" r="1.5" class="fill-white" opacity="0.6"/>
+    </g>
+  
+    
+    <g transform="translate(10, 480) rotate(270)">
+      <path d="M 0 30 L 0 0 L 30 0" class="stroke-white stroke-w-2 filter-glow" fill="none"/>
+      <polygon points="0,0 8,8 16,0 8,-8" class="fill-white filter-glow" transform="translate(6, 6) scale(0.6) rotate(45)"/>
+      <path d="M 8 35 Q 15 15 35 8" class="stroke-white stroke-w-1" fill="none" opacity="0.6"/>
+      <circle cx="3" cy="45" r="1.5" class="fill-white" opacity="0.6"/>
+      <circle cx="45" cy="3" r="1.5" class="fill-white" opacity="0.6"/>
+    </g>
+  
+
+    <g transform="translate(370, 60)">
+      <text x="0" y="0" class="font-serif text-gold filter-gold-glow font-bold" font-size="38" letter-spacing="4" text-anchor="middle">
+        Vigilante 2006
+        <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
+      </text>
+      
+      <text x="0" y="25" class="font-serif text-white font-italic" font-size="14" letter-spacing="2" text-anchor="middle" opacity="0.8">
+        CLASS: AI SYSTEMS ENGINEER
+      </text>
+    </g>
+
+    
+    <g transform="translate(120, 110)">
+      <line x1="0" y1="0" x2="230" y2="0" class="stroke-white stroke-w-1" opacity="0.4"/>
+      <polygon points="250, -4 258, 0 250, 4 242, 0" class="fill-gold filter-glow" opacity="0.8"/>
+      <circle cx="235" cy="0" r="1.5" class="fill-gold" opacity="0.6"/>
+      <circle cx="265" cy="0" r="1.5" class="fill-gold" opacity="0.6"/>
+      <line x1="270" y1="0" x2="500" y2="0" class="stroke-white stroke-w-1" opacity="0.4"/>
+    </g>
+  
+
+    <g transform="translate(40, 140)">
+      <rect x="0" y="0" width="310" height="150" class="stroke-white" fill="none" stroke-width="1" opacity="0.3" rx="4"/>
+      <rect x="0" y="0" width="310" height="25" class="fill-glass" opacity="0.1" rx="4"/>
+      <text x="155" y="17" class="font-sans text-gold font-bold" font-size="11" letter-spacing="2" text-anchor="middle">CHARACTER ATTRIBUTES</text>
+      
+      
+    <g transform="translate(0, 45)">
+      <rect x="0" y="-14" width="310" height="20" class="fill-glass" opacity="0.05">
+        <animate attributeName="opacity" values="0.05;0.1;0.05" dur="3s" begin="0.1s" repeatCount="indefinite"/>
+      </rect>
+      <line x1="0" y1="6" x2="310" y2="6" class="stroke-white stroke-w-1" opacity="0.1"/>
+      
+      <text x="5" y="0" class="font-sans text-muted" font-size="12">HP (Total Contributions)</text>
+      <text x="305" y="0" class="font-sans text-main" font-size="13" text-anchor="end">1,402</text>
+    </g>
+  
+      
+    <g transform="translate(0, 70)">
+      <rect x="0" y="-14" width="310" height="20" class="fill-glass" opacity="0.05">
+        <animate attributeName="opacity" values="0.05;0.1;0.05" dur="3s" begin="0.2s" repeatCount="indefinite"/>
+      </rect>
+      <line x1="0" y1="6" x2="310" y2="6" class="stroke-white stroke-w-1" opacity="0.1"/>
+      
+      <text x="5" y="0" class="font-sans text-muted" font-size="12">MP (Current Streak)</text>
+      <text x="305" y="0" class="font-sans text-gold font-bold" font-size="13" text-anchor="end">42 DAYS</text>
+    </g>
+  
+      
+    <g transform="translate(0, 95)">
+      <rect x="0" y="-14" width="310" height="20" class="fill-glass" opacity="0.05">
+        <animate attributeName="opacity" values="0.05;0.1;0.05" dur="3s" begin="0.3s" repeatCount="indefinite"/>
+      </rect>
+      <line x1="0" y1="6" x2="310" y2="6" class="stroke-white stroke-w-1" opacity="0.1"/>
+      
+      <text x="5" y="0" class="font-sans text-muted" font-size="12">RANK TIER</text>
+      <text x="305" y="0" class="font-sans text-gold font-bold filter-gold-glow" font-size="13" text-anchor="end">S+</text>
+    </g>
+  
+      
+    <g transform="translate(0, 120)">
+      <rect x="0" y="-14" width="310" height="20" class="fill-glass" opacity="0.05">
+        <animate attributeName="opacity" values="0.05;0.1;0.05" dur="3s" begin="0.4s" repeatCount="indefinite"/>
+      </rect>
+      <line x1="0" y1="6" x2="310" y2="6" class="stroke-white stroke-w-1" opacity="0.1"/>
+      
+      <text x="5" y="0" class="font-sans text-muted" font-size="12">EXP TO NEXT LEVEL</text>
+      <text x="305" y="0" class="font-sans text-muted" font-size="13" text-anchor="end">12,450 / 20K</text>
+    </g>
+  
+    </g>
+
+    <g transform="translate(390, 140)">
+      <rect x="0" y="0" width="310" height="150" class="stroke-white" fill="none" stroke-width="1" opacity="0.3" rx="4"/>
+      <rect x="0" y="0" width="310" height="25" class="fill-glass" opacity="0.1" rx="4"/>
+      <text x="155" y="17" class="font-sans text-gold font-bold" font-size="11" letter-spacing="2" text-anchor="middle">MAGIC / SKILLS</text>
+      
+      
+    <g transform="translate(5, 45)">
+      <text x="5" y="0" class="font-sans text-main" font-size="12">TypeScript / JavaScript</text>
+      <text x="115" y="0" class="font-sans text-muted" font-size="11" text-anchor="end">Lv.8</text>
+      
+      <rect x="125" y="-6" width="180" height="6" class="fill-bar-bg" rx="3"/>
+      <rect x="125" y="-6" width="171" height="6" class="fill-bar filter-glow" rx="3">
+        <animate attributeName="width" values="0;171" dur="2.1s" fill="freeze"/>
+      </rect>
+    </g>
+  
+      
+    <g transform="translate(5, 65)">
+      <text x="5" y="0" class="font-sans text-main" font-size="12">Python (AI/ML)</text>
+      <text x="115" y="0" class="font-sans text-muted" font-size="11" text-anchor="end">Lv.7</text>
+      
+      <rect x="125" y="-6" width="180" height="6" class="fill-bar-bg" rx="3"/>
+      <rect x="125" y="-6" width="153" height="6" class="fill-bar filter-glow" rx="3">
+        <animate attributeName="width" values="0;153" dur="2.2s" fill="freeze"/>
+      </rect>
+    </g>
+  
+      
+    <g transform="translate(5, 85)">
+      <text x="5" y="0" class="font-sans text-main" font-size="12">React / Next.js</text>
+      <text x="115" y="0" class="font-sans text-muted" font-size="11" text-anchor="end">Lv.9</text>
+      
+      <rect x="125" y="-6" width="180" height="6" class="fill-bar-bg" rx="3"/>
+      <rect x="125" y="-6" width="176.4" height="6" class="fill-bar filter-glow" rx="3">
+        <animate attributeName="width" values="0;176.4" dur="2.3s" fill="freeze"/>
+      </rect>
+    </g>
+  
+      
+    <g transform="translate(5, 105)">
+      <text x="5" y="0" class="font-sans text-main" font-size="12">Node.js / API</text>
+      <text x="115" y="0" class="font-sans text-muted" font-size="11" text-anchor="end">Lv.8</text>
+      
+      <rect x="125" y="-6" width="180" height="6" class="fill-bar-bg" rx="3"/>
+      <rect x="125" y="-6" width="162" height="6" class="fill-bar filter-glow" rx="3">
+        <animate attributeName="width" values="0;162" dur="2.4s" fill="freeze"/>
+      </rect>
+    </g>
+  
+      
+    <g transform="translate(5, 125)">
+      <text x="5" y="0" class="font-sans text-main" font-size="12">Docker / AWS</text>
+      <text x="115" y="0" class="font-sans text-muted" font-size="11" text-anchor="end">Lv.6</text>
+      
+      <rect x="125" y="-6" width="180" height="6" class="fill-bar-bg" rx="3"/>
+      <rect x="125" y="-6" width="126" height="6" class="fill-bar filter-glow" rx="3">
+        <animate attributeName="width" values="0;126" dur="2.5s" fill="freeze"/>
+      </rect>
+    </g>
+  
+    </g>
+
+    <g transform="translate(40, 320)">
+      <rect x="0" y="0" width="660" height="120" class="stroke-white" fill="none" stroke-width="1" opacity="0.3" rx="4"/>
+      <rect x="0" y="0" width="660" height="25" class="fill-glass" opacity="0.1" rx="4"/>
+      <text x="330" y="17" class="font-sans text-gold font-bold" font-size="11" letter-spacing="2" text-anchor="middle">ACTIVE QUESTS</text>
+
+      <g transform="translate(20, 55)">
+        <circle cx="5" cy="-4" r="3" class="fill-gold filter-glow"><animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/></circle>
+        <text x="20" y="0" class="font-sans text-main font-bold" font-size="14">Main Quest: Developer OS Platform</text>
+        <text x="640" y="0" class="font-sans text-gold" font-size="12" text-anchor="end">COMPLETE</text>
+        <rect x="20" y="10" width="620" height="4" class="fill-bar-bg" rx="2"/>
+        <rect x="20" y="10" width="620" height="4" class="fill-bar filter-glow" rx="2"/>
+      </g>
+      
+      <g transform="translate(20, 95)">
+        <circle cx="5" cy="-4" r="3" class="fill-white" opacity="0.5"/>
+        <text x="20" y="0" class="font-sans text-muted" font-size="14">Side Quest: Neural Autonomous Agent</text>
+        <text x="640" y="0" class="font-sans text-main" font-size="12" text-anchor="end">IN PROGRESS (60%)</text>
+        <rect x="20" y="10" width="620" height="4" class="fill-bar-bg" rx="2"/>
+        <rect x="20" y="10" width="372" height="4" class="fill-bar filter-glow" rx="2">
+           <animate attributeName="width" values="0;372" dur="3s" fill="freeze"/>
+        </rect>
+      </g>
+    </g>
+
+    
+    <g transform="translate(120, 465)">
+      <line x1="0" y1="0" x2="230" y2="0" class="stroke-white stroke-w-1" opacity="0.4"/>
+      <polygon points="250, -4 258, 0 250, 4 242, 0" class="fill-gold filter-glow" opacity="0.8"/>
+      <circle cx="235" cy="0" r="1.5" class="fill-gold" opacity="0.6"/>
+      <circle cx="265" cy="0" r="1.5" class="fill-gold" opacity="0.6"/>
+      <line x1="270" y1="0" x2="500" y2="0" class="stroke-white stroke-w-1" opacity="0.4"/>
+    </g>
+  
+
+  </g>
+</svg>

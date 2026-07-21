@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 48" role="img" aria-label="Ink brush section divider">
+  <defs>
+    <linearGradient id="ink" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#EF4444" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#14B8A6" stop-opacity="0.9"/>
+      <stop offset="80%" stop-color="#EF4444" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#EF4444" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      @keyframes reveal {
+        0% { stroke-dashoffset: 1100; opacity: 0.3; }
+        100% { stroke-dashoffset: 0; opacity: 1; }
+      }
+      .brush-line {
+        stroke-dasharray: 1100;
+        animation: reveal 3s ease-out forwards;
+      }
+    </style>
+  </defs>
+  <line x1="50" y1="24" x2="1050" y2="24" stroke="#2A3242" stroke-width="1" opacity="0.5"/>
+  <path class="brush-line" d="M80 26 Q300 14 550 26 T1020 26" fill="none" stroke="url(#ink)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="550" cy="24" r="5" fill="#EF4444" opacity="0.9"/>
+</svg>
